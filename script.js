@@ -87,4 +87,21 @@ const renderizarLista = () =>{
         itemLista.append(favorito)
     })
 }
+/*
+Adiciona o evento de clique ao botão 
+*/
 
+btn1.addEventListener('click',()=>{
+    //pega o input onde o usuário digita o filme
+    const inputUsuario = document.querySelector('#filmeInput')
+    /*adiciona um id ao filme considerando que o tamanho do array
+    será sempre um a mais que seu index, já que o index começa em 0 */
+    let id = filmes.length
+    //adiciona o valor à propriedade nome do objeto dentro do array filmes
+    filmes.push({id:id,nome: inputUsuario.value, genero: '', lancamento: ''})
+    console.log(filmes)
+    //renderiza a lista novamente
+    renderizarLista()
+    //apaga o campo de digitação
+    inputUsuario.value = ''
+})
