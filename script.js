@@ -33,3 +33,17 @@ const filmes = [
      genero: 'romance',
      lancamento: 1983
 }]
+
+/*
+Criando um array de filmes favoritos
+*/
+let filmesFavoritos = []
+
+/*
+Pegando Elementos HTML
+*/
+
+//pega o elemento button
+const btn1 = document.querySelector('button')
+//pega a lista de filmes
+const listaFilmes = document.querySelector('#listaFilmes')
