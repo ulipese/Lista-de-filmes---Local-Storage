@@ -128,26 +128,6 @@ const favoritoClicado = (eventoDeClique) => {
 
 }
 
-const favoritoClicado = (eventoDeClique, objetoFilme) => {
-    /*adiciona um objeto com a propriedade favorito e não favorito,
-    e seus valores são os caminhos da imagem*/
-    const favoriteState = {
-        favorited: 'img/heart-fill.svg',
-        notFavorited: 'img/heart.svg'
-      }
-      //valida se o src da imagem que foi clicada inclui o caminho da imagem de não favoritado
-      if(eventoDeClique.target.src.includes(favoriteState.notFavorited)) {
-        // se não incluir, mudar a imagem para favoritado e executar a função de salvar no localStorage
-        eventoDeClique.target.src = favoriteState.favorited
-      } else {
-        /* senão, manter a imagem de não favoritado e executar a função de remover
-        do localStorage, passando como parâmetro o id do filme*/
-        eventoDeClique.target.src = favoriteState.notFavorited
-        removeFromLocalStorage(objetoFilme.id)
-      }
-
-}
-
 /*
 Função executada para remover o filme no localStorage
 */
