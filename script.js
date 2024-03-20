@@ -105,7 +105,7 @@ btn1.addEventListener('click',()=>{
     //apaga o campo de digitação
     inputUsuario.value = ''
 })
-
+/*
 Função que é executada quando o botão de favorito é clicado
 */
 
